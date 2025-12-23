@@ -1,0 +1,728 @@
+/* Signup Container */
+.signup-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f8fafc, #f0fdf4);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.signup-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.signup-header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.signup-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.back-arrow {
+  width: 1rem;
+  height: 1rem;
+  color: #475569;
+}
+
+.back-logo-icon {
+  width: 2rem;
+  height: 2rem;
+  background: linear-gradient(to bottom right, #10b981, #0d9488);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-logo-svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: white;
+}
+
+.back-logo-text {
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.login-prompt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.login-prompt .short-text {
+  display: none;
+}
+
+.login-button {
+  background: none;
+  border: none;
+  color: #059669;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #f1f5f9;
+}
+
+/* Main Content */
+.signup-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.signup-content {
+  width: 100%;
+  max-width: 42rem;
+}
+
+/* Trust Badge */
+.trust-badge-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid #bbf7d0;
+  margin-bottom: 1.5rem;
+}
+
+.trust-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #059669;
+}
+
+.trust-badge span {
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.signup-title {
+  color: #0f172a;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.signup-subtitle {
+  color: #64748b;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Progress Steps */
+.progress-steps {
+  margin-bottom: 2rem;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-number {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.step-active {
+  background-color: #059669;
+  color: white;
+}
+
+.step-check {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.step-label {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.step-label-active {
+  color: #0f172a;
+}
+
+.step-line {
+  width: 4rem;
+  height: 2px;
+  background-color: #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.step-line-active {
+  background-color: #059669;
+}
+
+/* Signup Card */
+.signup-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Form Groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-label {
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.form-input {
+  width: 100%;
+  height: 3rem;
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.password-input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 0.25rem;
+  transition: color 0.2s;
+  z-index: 10;
+}
+
+.password-toggle:hover {
+  color: #4b5563;
+}
+
+.eye-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.input-hint {
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0;
+}
+
+/* Form Select */
+.form-select {
+  width: 100%;
+  height: 3rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #374151;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.form-select option {
+  padding: 0.5rem;
+}
+
+/* Terms Section */
+.terms-section {
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.terms-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.checkbox-input:checked {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+.checkbox-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.terms-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.terms-link {
+  color: #059669;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.terms-link:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+/* ===== FORM ACTIONS - CORRECTED ===== */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* Back Button - Desktop (side-by-side) */
+.back-button-form {
+  flex: 1;
+  height: 3.5rem;
+  background-color: white;
+  color: #374151;
+  border: 2px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button-form:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px);
+}
+
+.back-button-form:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Signup Button - Desktop (side-by-side) */
+.signup-button {
+  flex: 2;
+  height: 3.5rem;
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(5, 150, 105, 0.15);
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #047857, #065f46);
+  box-shadow: 0 6px 8px rgba(5, 150, 105, 0.2);
+  transform: translateY(-2px);
+}
+
+.signup-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.15);
+}
+
+.signup-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.2);
+}
+
+.signup-button:disabled {
+  background: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+/* Social Login */
+.social-login-section {
+  margin-top: 1.5rem;
+}
+
+.or-text {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.social-buttons-or {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0.25rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.social-buttons-or::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: #e5e7eb;
+  z-index: -1;
+}
+
+.social-button {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background: white;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.google-button:hover {
+  border-color: #dc2626;
+}
+
+.facebook-button:hover {
+  border-color: #1877f2;
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.google-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.facebook-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #1877f2;
+}
+
+/* Error message styling */
+.input-error {
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0;
+  font-weight: 500;
+}
+
+/* Features Grid - Original desktop layout */
+.features-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #4b5563;
+}
+
+.feature-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.feature-title {
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.125rem;
+}
+
+.feature-description {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+/* Mobile-specific features grid styling */
+@media (max-width: 767px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.5rem;
+  }
+  
+  .feature-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .feature-icon {
+    margin-top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    justify-self: center;
+  }
+  
+  .feature-title {
+    font-size: 0.875rem;
+    margin-bottom: 0.125rem;
+    line-height: 1.2;
+  }
+  
+  .feature-description {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .features-grid {
+    gap: 1rem;
+    max-width: 320px;
+  }
+  
+  .feature-item {
+    padding: 0.5rem;
+    gap: 0.75rem;
+  }
+  
+  .feature-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .feature-title {
+    font-size: 0.8125rem;
+  }
+  
+  .feature-description {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 768px) {
+  button, 
+  .form-input, 
+  .form-select,
+  .checkbox-input {
+    min-height: 44px; /* Apple's minimum touch target size */
+  }
+  
+  .password-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .social-button {
+    min-height: 44px;
+  }
+}
+
+/* Additional insurance for button heights */
+.back-button-form,
+.signup-button,
+.continue-button,
+.create-button {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

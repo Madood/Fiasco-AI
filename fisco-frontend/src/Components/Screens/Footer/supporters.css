@@ -1,0 +1,76 @@
+/* ============================
+   Supporters Section
+============================ */
+.footer-support {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1e293b;
+}
+
+/* ============================
+   Title
+============================ */
+.footer-support-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================
+   Grid Layout
+============================ */
+.footer-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .footer-support-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-support-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================
+   Individual Card
+============================ */
+.support-card {
+  background-color: #020617;
+  border: 1px dashed #334155;
+  border-radius: 0.75rem;
+  padding: 0.75rem;           /* 🔑 space for zoom-out */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  overflow: hidden;
+}
+
+/* ============================
+   Logos (ZOOM-OUT)
+============================ */
+.support-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;        /* 🔑 no cropping */
+  filter: grayscale(100%);
+  opacity: 0.95;
+  transition: all 0.25s ease-in-out;
+}
+
+/* ============================
+   Hover Effect
+============================ */
+.support-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
